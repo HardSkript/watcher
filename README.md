@@ -1,7 +1,7 @@
 TVwatcher
 =======
 
-A Anime / TV tracker made with Laravel
+An Anime / TV tracker made with Laravel
 
 
 ---
