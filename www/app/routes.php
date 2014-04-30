@@ -19,4 +19,4 @@ Route::get('/', function()
 Route::get('/tv/', function()
 {
     return 'this is a string';
-})
+});
