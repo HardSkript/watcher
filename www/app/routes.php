@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/tv/', function()
+Route::get('tv', function()
 {
     return 'this is a string';
 });
