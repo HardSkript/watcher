@@ -15,9 +15,24 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	function  __construct()
+	{
+		$this->beforeFilter(function()
+		{
+		    Event::fire('clockwork.controller.start');
+		});
+
+		$this->afterFilter(function()
+		{
+		    Event::fire('clockwork.controller.end');
+		});
+	}
+
 	public function showWelcome()
 	{
 		return View::make('hello');
 	}
+
+
 
 }

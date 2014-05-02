@@ -7,6 +7,20 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
+
+	protected function __construct()
+	{
+		$this->beforeFilter(function()
+		{
+		    Event::fire('clockwork.controller.start');
+		});
+
+		$this->afterFilter(function()
+		{
+		    Event::fire('clockwork.controller.end');
+		});
+	}
+
 	protected function setupLayout()
 	{
 		if ( ! is_null($this->layout))
